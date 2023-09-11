@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+h1 {
+  color: #ffa500;
+  text-align: center;
+  display: inline;
+  text-wrap: nowrap;
+  font-weight: bolder;
+  animation-name: head;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+body {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to bottom, #87ceeb, #1e90ff);
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  width: 536.75px;
+}
+
+input {
+  width: 70%;
+  padding: 10px 20px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+#submit {
+  margin-left: 0px;
+  padding: 10px 20px;
+  background-color: #ffa500;
+  outline: none;
+  border: none;
+  flex-grow: 1;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  color: white;
+}
+
+#submit:hover {
+  background-color: #ffd700;
+}
+.mid .responseCard {
+  padding: 20px 30px;
+  text-align: center;
+  border-radius: 25px;
+  width: 68.4375px;
+  height: 138.719px;
+  margin-top: 0;
+  border: 1px solid white;
+  color: black;
+}
+.mid .responseCard p {
+  color: white;
+}
+.mid {
+  display: flex;
+  justify-content: center;
+  border: 1px solid white;
+  margin: 30px auto;
+  margin-bottom: 0;
+  width: 60%;
+  border-radius: 25px;
+  box-shadow: 4px 6px rgba(0, 0, 0, 0.1);
+  color: #333;
+  animation: gradientAnimation 5s linear infinite;
+  background: linear-gradient(to bottom, #ffd700, #87ceeb);
+  background-size: 100% 200%;
+}
+
+@keyframes head {
+  0% {
+    transform: scale(100%);
+  }
+  50% {
+    transform: scale(105%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  30% {
+    background-position: 0% 100%;
+  }
+  60% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.midnone {
+  display: none;
+}
+
+.pending {
+  font-size: xx-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.StatusIcon {
+  font-size: xx-large;
+}
+
+.ctry,
+#ctry {
+  margin-bottom: 2px;
+  margin-top: 5px;
+}
+.day,
+#day {
+  color: gray;
+}
+.icon {
+  font-size: x-large;
+  margin: 5px;
+}
+
+.errormessage {
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(236, 36, 36, 0.829);
+  border: 1px solid red;
+  color: white;
+  display: none;
+}
+
+.otherCountries {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+.otherCountries > div {
+  border: 1px solid white;
+  margin-top: 30px;
+  padding: 20px 30px;
+  text-align: center;
+  border-radius: 25px;
+  width: 68.4375px;
+  height: 138.719px;
+  transition: all 0.4s;
+  box-shadow: 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.otherCountries div:hover {
+  transform: scale(110%);
+  background-color: lightblue;
+}
+.bigcard {
+  border-radius: 25px;
+  width: 68.4375px;
+  height: 138.719px;
+
+  flex-grow: 1;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+@media screen and (max-width: 562px) {
+  .otherCountries {
+    width: 80%;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  input {
+    width: 60%;
+  }
+  .bigcard {
+    font-size: 3rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 429px) {
+  .otherCountries {
+    width: 80%;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+  }
+  .search {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .mid {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 372px) {
+  .otherCountries {
+    width: 100%;
+  }
+  .errormessage {
+    font-size: 0.7rem;
+  }
+}
+
+.search {
+  display: flex;
+  border-radius: 25px;
+}
+
+#listbtn {
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 2rem;
+}
